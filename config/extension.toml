@@ -1,0 +1,19 @@
+[package]
+
+# Note: Semantic Versioning is used: https://semver.org/
+version = "0.3.2"
+
+# Description
+title = "ScaLeR Scalable Simulation Framework"
+description="TODO."
+readme  = "docs/README.md"
+repository = "https://github.com/LXYYY/Scaler"
+category = "robotics"
+keywords = ["kit", "robotics", "learning", "ai"]
+
+[dependencies]
+"omni.isaac.orbit" = {}
+"omni.isaac.orbit_env" = {}
+
+[[python.module]]
+name = "scaler.isaac.scaler"
