@@ -99,7 +99,7 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description="Converts all mesh.obj files in a folder to usd")
-    parser.add_argument("--path", type=str, help="Path to the folder to convert")
+    parser.add_argument("--path", type=str, help="Path to the folder to convert", required=True)
     parser.add_argument("--folders", type=str, nargs="+", help="Folders to convert")
     parser.add_argument("--max_models", type=int, default=100000, help="Maximum number of models to convert")
     args = parser.parse_args()
