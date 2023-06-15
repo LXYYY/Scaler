@@ -2,18 +2,20 @@ from omni.isaac.orbit.utils import configclass
 
 from omni.isaac.orbit_envs.isaac_env_cfg import EnvCfg, IsaacEnvCfg, PhysxCfg, SimCfg, ViewerCfg
 
+from scaler.isaac.scaler.robots.carter.carter_cfg import CarterCfg, CarterV1Cfg
+
 
 @configclass
 class SceneCfg:
     """Scene properties."""
 
-    dataset_path: str = "/workspaces/data/gibson/gibson_tiny"
+    dataset_path: str = "/workspaces/data/gibson/gibson_fullplus"
     scene_id: str = "random"
 
 
 @configclass
 class GibsonSampleEnvCfg(IsaacEnvCfg):
-    env: EnvCfg = EnvCfg(num_envs=2, env_spacing=10, episode_length_s=5.0)
+    env: EnvCfg = EnvCfg(num_envs=10, env_spacing=1, episode_length_s=5.0)
     scene: SceneCfg = SceneCfg()
     viewer: ViewerCfg = ViewerCfg(debug_vis=True, eye=(7.5, 7.5, 7.5), lookat=(0.0, 0.0, 0.0))
     sim: SimCfg = SimCfg(
@@ -27,3 +29,5 @@ class GibsonSampleEnvCfg(IsaacEnvCfg):
             bounce_threshold_velocity=0.2,
         ),
     )
+
+    robot: CarterCfg = CarterV1Cfg
