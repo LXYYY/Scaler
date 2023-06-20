@@ -23,6 +23,7 @@ INSTALL_REQUIRES = [
     "prettytable==3.3.0",
     # devices
     "hidapi",
+    "open3d"
 ]
 
 # Installation operation
